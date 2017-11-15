@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "system",
     "target": "es5",
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "moduleResolution": "node"
   },
   "include": [
     "src/**/*"
