@@ -1,0 +1,16 @@
+{
+  "name": "angular-ts-math",
+  "version": "0.0.1",
+  "description": "Angular ts numbers and math!",
+  "main": "dist/angular-ts-math.js",
+  "types": "dist/angular-ts-math.d.ts",
+  "dependencies": {
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s3c4/angular-ts-math.git"
+  }
+}
