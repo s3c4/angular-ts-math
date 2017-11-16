@@ -9,6 +9,9 @@ An angular repository for numbers and math.
 
 # Use
 `angularMath.isEven(10);`
+
 `angularMath.isOdd(10);`
+
 `angularMath.sum(1, 2, 3);`
+
 `angularMath.sum(5, 6);`
