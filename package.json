@@ -12,5 +12,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/s3c4/angular-ts-math.git"
-  }
+  },
+  "keywords": ["angular", "math", "ts", "typescript", "angular2" ]
 }
