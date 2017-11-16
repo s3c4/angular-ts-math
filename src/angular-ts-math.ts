@@ -119,6 +119,26 @@ export namespace angularMath {
         }
         return div;
     }
+    /** Example: number = 12321; figure = 1; return = 2; */
+    export function figureOfNumber(number: number, figure: number): number|boolean {
+        if(isNumber(number) && isInteger(number) &&
+           isNumber(figure) && isInteger(figure) &&
+           figure >= 0 && figure <= 9
+        ) {
+            let count = 0;
+            let stringNumber = numberToString(number);
+            let stringFigure = numberToString(figure);
+            for(let i = 0; i < stringNumber.length; i++) {
+                if(stringNumber[i] === stringFigure) {
+                    count++;
+                }
+            }
+            return count;
+        } else {
+            return false;
+        }
+    }
+
     /** Example: numbers = 10, 20, 30, 40; return 10 */
     export function getMinimum(...args: number[]): number { return Math.min(...args) }
     /** Example: numbers = 10, 20, 30, 40; return 40 */

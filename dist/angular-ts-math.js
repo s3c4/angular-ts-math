@@ -159,6 +159,26 @@ var angularMath;
         return div;
     }
     angularMath.div = div;
+    /** Example: number = 12321; figure = 1; return = 2; */
+    function figureOfNumber(number, figure) {
+        if (isNumber(number) && isInteger(number) &&
+            isNumber(figure) && isInteger(figure) &&
+            figure >= 0 && figure <= 9) {
+            var count = 0;
+            var stringNumber = numberToString(number);
+            var stringFigure = numberToString(figure);
+            for (var i = 0; i < stringNumber.length; i++) {
+                if (stringNumber[i] === stringFigure) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        else {
+            return false;
+        }
+    }
+    angularMath.figureOfNumber = figureOfNumber;
     /** Example: numbers = 10, 20, 30, 40; return 10 */
     function getMinimum() {
         var args = [];

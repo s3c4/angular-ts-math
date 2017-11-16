@@ -54,6 +54,8 @@ export declare namespace angularMath {
     function mul(...args: number[]): number;
     /** Example: numbers = 100, 2, 5; return = 10 */
     function div(...args: number[]): number;
+    /** Example: number = 12321; figure = 1; return = 2; */
+    function figureOfNumber(number: number, figure: number): number | boolean;
     /** Example: numbers = 10, 20, 30, 40; return 10 */
     function getMinimum(...args: number[]): number;
     /** Example: numbers = 10, 20, 30, 40; return 40 */

@@ -1,17 +1,39 @@
 # angular-ts-math
 An angular repository for numbers and math.
 
+# Content
+
+* [Install](#install)
+* [Import](#import)
+* [Use](#use)
+* [License](#license)
+
 # Install
-`npm install angular-ts-math`
+```bash
+npm install angular-ts-math
+```
 
 # Import
-`import { angularMath } from 'angular-ts-math';`
+```typescript
+import { angularMath } from 'angular-ts-math';
+```
 
 # Use
-`angularMath.isEven(10);`
+```typescript
+angularMath.isEven(10);
+```
 
-`angularMath.isOdd(10);`
+```typescript
+angularMath.isOdd(10);
+```
 
-`angularMath.sum(1, 2, 3);`
+```typescript
+angularMath.sum(1, 2, 3);
+```
 
-`angularMath.sum(5, 6);`
+```typescript
+angularMath.sum(5, 6);
+```
+
+# License
+MIT © [Secareanu Andrei](https://github.com/s3c4)
