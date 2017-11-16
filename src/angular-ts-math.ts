@@ -11,6 +11,17 @@ export namespace angularMath {
     export function getLog2E(): number { return Math.LOG2E }
     export function getLog10E(): number { return Math.LOG10E }
 
+    /**
+     * Get random
+     */
+    /** Example: return = 0.123456789 */
+    export function getRandom(): number { return Math.random() }
+    /** Example: min = 1; max = 6; return = 4 */
+    export function getIntegerRandomRange(min: number, max: number) { return Math.floor(Math.random() * (max - min + 1) + min) }
+
+    /**
+     * Util
+     */
     /** Example: number = 10; return = true */
     export function isNumber(number: number): boolean { return typeof number === 'number' }
     /** Example: number = 10; return = true */
@@ -20,6 +31,15 @@ export namespace angularMath {
     /** Example: number = 10; return = false */
     export function isOdd(number: number): boolean {return isNumber(number) && number % 2 !== 0 }
 
+    /**
+     * Convert
+     */
+    /** Example: number = 123; return = '123'*/
+    export function numberToString(number: number): string { return number.toString() }
+
+    /**
+     * Number actions
+     */
     /** Example: number = 10; percent = 50; return = 5; */
     export function percentOfNumber(number: number, percent: number): number { return (isNumber(percent) && percent >= 0) ? number * percent/100 : 0 }
     /** Example: number = 5; return = -5; */
@@ -29,9 +49,7 @@ export namespace angularMath {
     /** Example number = 10.25; return = 10; */
     export function integerOfNumber(number: number): string { return number.toFixed() }
     /** Example number = 10.123456; decimals = 2; return = 10.12 */
-    export function getNumberWithDecimals(number: number, decimals: number) {
-        return (this.isNumber(decimals) && decimals >= 0 && this.isInteger(decimals)) ? number.toFixed(decimals) : number
-    }
+    export function getNumberWithDecimals(number: number, decimals: number) { return (this.isNumber(decimals) && decimals >= 0 && this.isInteger(decimals)) ? number.toFixed(decimals) : number }
     /** Example: number = -10; return = 10 */
     export function absoluteOfNumber(number: number): number { return isNumber(number) ? Math.abs(number) : 0 }
     /** Example: number = 10; p = 2; return = 100 */
@@ -47,10 +65,15 @@ export namespace angularMath {
     /** Example: number = 10.5; return = 10 */
     export function backIntegerOfNumber(number: number): number { return Math.floor(number) }
 
-    /** Example: return = 0.123456789 */
-    export function getRandom(): number { return Math.random() }
-    /** Example: min = 1; max = 6; return = 4 */
-    export function getIntegerRandomRange(min: number, max: number) { return Math.floor(Math.random() * (max - min + 1) + min) }
+    /** Example: number = 123; return = 321 */
+    export function reverseOfNumber(number: number): number {
+        if(isNumber(number)) {
+            let stringNumber = numberToString(number) + '';
+            return Number(stringNumber.split('').reverse().join(''));
+        } else {
+            return 0;
+        }
+    }
 
     /** Example: number = 12345; return = 5 */
     export function lengthOfNumber(number: number): number {
@@ -66,6 +89,42 @@ export namespace angularMath {
         }
     }
 
+    /**
+     * Example: number = 123; return = false
+     * Example: number = 12321; return = true
+     */
+    export function isPalindrome(number: number): boolean {
+        if(isNumber(number)) {
+            let reverseNumber = reverseOfNumber(number);
+            return (isNumber(reverseNumber) && number === reverseNumber);
+        } else {
+            return false;
+        }
+    }
+
+    /** Example: number = 12321; figure = 1; return = 2; */
+    export function figureOfNumber(number: number, figure: number): number|boolean {
+        if(isNumber(number) && isInteger(number) &&
+            isNumber(figure) && isInteger(figure) &&
+            figure >= 0 && figure <= 9
+        ) {
+            let count = 0;
+            let stringNumber = numberToString(number);
+            let stringFigure = numberToString(figure);
+            for(let i = 0; i < stringNumber.length; i++) {
+                if(stringNumber[i] === stringFigure) {
+                    count++;
+                }
+            }
+            return count;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Operations
+     */
     /** Example: numbers = 1, 2, 3, 4, 5; return = 15 */
     export function sum(...args: number[]) {
         let sum = 0;
@@ -119,25 +178,6 @@ export namespace angularMath {
         }
         return div;
     }
-    /** Example: number = 12321; figure = 1; return = 2; */
-    export function figureOfNumber(number: number, figure: number): number|boolean {
-        if(isNumber(number) && isInteger(number) &&
-           isNumber(figure) && isInteger(figure) &&
-           figure >= 0 && figure <= 9
-        ) {
-            let count = 0;
-            let stringNumber = numberToString(number);
-            let stringFigure = numberToString(figure);
-            for(let i = 0; i < stringNumber.length; i++) {
-                if(stringNumber[i] === stringFigure) {
-                    count++;
-                }
-            }
-            return count;
-        } else {
-            return false;
-        }
-    }
 
     /** Example: numbers = 10, 20, 30, 40; return 10 */
     export function getMinimum(...args: number[]): number { return Math.min(...args) }
@@ -154,6 +194,5 @@ export namespace angularMath {
     export function acosNumber(number: number): number { return Math.acos(number) }
     export function atanNumber(number: number): number { return Math.atan(number) }
 
-    /** Example: number = 123; return = '123'*/
-    export function numberToString(number: number): string { return number.toString() }
+
 }

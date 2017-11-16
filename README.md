@@ -1,11 +1,23 @@
 # angular-ts-math
 An angular repository for numbers and math.
 
+Dependencies: 
+* [typescript](https://www.npmjs.com/package/typescript)
+* [tslint](https://www.npmjs.com/package/tslint)
+
 # Content
 
 * [Install](#install)
 * [Import](#import)
 * [Use](#use)
+    * [Constants](#constants)
+    * [Random](#random)
+    * [Utils](#utils)
+    * [Convert](#convert)
+    * [Number actions](#number-actions)
+    * [Operations](#operations)
+    * [Math](#math)
+* [Repository](#repository)
 * [License](#license)
 
 # Install
@@ -19,21 +31,72 @@ import { angularMath } from 'angular-ts-math';
 ```
 
 # Use
-```typescript
-angularMath.isEven(10);
-```
 
-```typescript
-angularMath.isOdd(10);
-```
+##### Constants
 
-```typescript
-angularMath.sum(1, 2, 3);
-```
+* get the pi value `angularMath.getPi();`
+* get the e value `angularMath.getE();`
+* get the ln2 value `angularMath.getLn2();`
+* get the ln10 value `angularMath.getLn10();`
+* get the log2 of e value `angularMath.getLog2E();`
+* get the log10 of e value `angularMath.getLog10E();`
 
-```typescript
-angularMath.sum(5, 6);
-```
+##### Random
+
+* get random values between [0,1) `angularMath.getRandom();`
+* get random integer values between the min and max `angularMath.getIntegerRandomRange(min, max);`
+
+##### Utils
+
+* check if the value is type number `angularMath.isNumber(number);`
+* check if the number is integer `angularMath.isInteger(number);`
+* check if the number is even `angularMath.isEven(number);`
+* check if the number is odd `angularMath.isOdd(number);`
+
+##### Convert
+
+* convert a number to string `angularMath.numberToString(number);`
+
+##### Number actions
+
+* get x% percent of a number `angularMath.percentOfNumber(number, percent);`
+* change the sign of a number `angularMath.oppositeOfNumber(number);`
+* get the rest of a div from 2 numbers `angularMath.getRest(number, div);`
+* get integer of a number `angularMath.integerOfNumber(number);`
+* get the number with a specific number of decimals `angularMath.getNumberWithDecimals(number, decimals);`
+* convert a number in a positive one `angularMath.absoluteOfNumber(number);`
+* get the power of a number `angularMath.powerOfNumber(number, power);`
+* get the square of a number `angularMath.squareOfNumber(number);`
+* get logarithm of a number `angularMath.logarithmOfNumber(number);`
+* get the nearest integer number of a number `angularMath.nearOfNumber(number);`
+* get the nearest next integer number of a number `angularMath.nextIntegerOfNumber(number);`
+* get the nearest back integer number of a number `angularMath.backIntegerOfNumber(number);`
+* get the reverse number of a number `angularMath.reverseOfNumber(number);`
+* get the length of a number `angularMath.lengthOfNumber(number);`
+* check if a number is palindrome `angularMath.isPalindrome(number);`
+* count the number of a specific figure in a number `angularMath.figureOfNumber(number, figure);`
+
+##### Operations
+
+* get the sum of n numbers `angularMath.sum(n1, n2, n3, ...);`
+* get the dif of n numbers, starting with the first `angularMath.dif(n1, n2, n3, ...);`
+* get the mul of n numbers `angularMath.mul(n1, n2, n3, ...);`
+* get the div of n numbers, starting with the first `angularMath.div(n1, n2, n3, ...);`
+* get the min value of n numbers `angularMath.getMinimum(n1, n2, n3, ...);`
+* get the max value of n numbers `angularMath.getMaximum(n1, n2, n3, ...);`
+
+##### Math
+
+* get the cos value of a number `angularMath.cosNumber(number);`
+* get the sin value of a number `angularMath.sinNumber(number);`
+* get the tan value of a number `angularMath.tanNumber(number);`
+* get the acos value of a number `angularMath.acosNumber(number);`
+* get the asin value of a number `angularMath.asinNumber(number);`
+* get the atan value of a number `angularMath.atanNumber(number);`
+
+# Repository
+* [Repository](https://github.com/s3c4/angular-ts-math)
 
 # License
-MIT © [Secareanu Andrei](https://github.com/s3c4)
+
+[MIT](https://github.com/s3c4/angular-ts-math/blob/master/LICENSE) © [Secareanu Andrei](https://github.com/s3c4)

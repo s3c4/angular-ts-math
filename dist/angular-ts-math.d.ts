@@ -8,6 +8,16 @@ export declare namespace angularMath {
     function getLn10(): number;
     function getLog2E(): number;
     function getLog10E(): number;
+    /**
+     * Get random
+     */
+    /** Example: return = 0.123456789 */
+    function getRandom(): number;
+    /** Example: min = 1; max = 6; return = 4 */
+    function getIntegerRandomRange(min: number, max: number): number;
+    /**
+     * Util
+     */
     /** Example: number = 10; return = true */
     function isNumber(number: number): boolean;
     /** Example: number = 10; return = true */
@@ -16,6 +26,14 @@ export declare namespace angularMath {
     function isEven(number: number): boolean;
     /** Example: number = 10; return = false */
     function isOdd(number: number): boolean;
+    /**
+     * Convert
+     */
+    /** Example: number = 123; return = '123'*/
+    function numberToString(number: number): string;
+    /**
+     * Number actions
+     */
     /** Example: number = 10; percent = 50; return = 5; */
     function percentOfNumber(number: number, percent: number): number;
     /** Example: number = 5; return = -5; */
@@ -40,12 +58,20 @@ export declare namespace angularMath {
     function nextIntegerOfNumber(number: number): number;
     /** Example: number = 10.5; return = 10 */
     function backIntegerOfNumber(number: number): number;
-    /** Example: return = 0.123456789 */
-    function getRandom(): number;
-    /** Example: min = 1; max = 6; return = 4 */
-    function getIntegerRandomRange(min: number, max: number): number;
+    /** Example: number = 123; return = 321 */
+    function reverseOfNumber(number: number): number;
     /** Example: number = 12345; return = 5 */
     function lengthOfNumber(number: number): number;
+    /**
+     * Example: number = 123; return = false
+     * Example: number = 12321; return = true
+     */
+    function isPalindrome(number: number): boolean;
+    /** Example: number = 12321; figure = 1; return = 2; */
+    function figureOfNumber(number: number, figure: number): number | boolean;
+    /**
+     * Operations
+     */
     /** Example: numbers = 1, 2, 3, 4, 5; return = 15 */
     function sum(...args: number[]): number;
     /** Example: numbers = 10, 1, 2, 3; return = 4 */
@@ -54,8 +80,6 @@ export declare namespace angularMath {
     function mul(...args: number[]): number;
     /** Example: numbers = 100, 2, 5; return = 10 */
     function div(...args: number[]): number;
-    /** Example: number = 12321; figure = 1; return = 2; */
-    function figureOfNumber(number: number, figure: number): number | boolean;
     /** Example: numbers = 10, 20, 30, 40; return 10 */
     function getMinimum(...args: number[]): number;
     /** Example: numbers = 10, 20, 30, 40; return 40 */
@@ -69,6 +93,4 @@ export declare namespace angularMath {
     function asinNumber(number: number): number;
     function acosNumber(number: number): number;
     function atanNumber(number: number): number;
-    /** Example: number = 123; return = '123'*/
-    function numberToString(number: number): string;
 }
