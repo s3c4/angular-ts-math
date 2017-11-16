@@ -1,1 +1,1 @@
-export { AngularTsMath } from './angular-ts-math';
+export { angularMath } from './angular-ts-math';
