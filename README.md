@@ -20,8 +20,8 @@ Dependencies:
 * [Repository](#repository)
 * [License](#license)
 * [Release](#release)
-    * [v1.0.6](#v1.0.6)
-    * [v1.0.5](#v1.0.5)
+    * [v1.0.6](#v106)
+    * [v1.0.5](#v105)
 
 # Install
 ```bash
