@@ -27,10 +27,25 @@ export declare namespace angularMath {
     /** Example: number = 10; return = false */
     function isOdd(number: number): boolean;
     /**
+     * Example: number = 123; return = false
+     * Example: number = 12321; return = true
+     */
+    function isPalindrome(number: number): boolean;
+    /**
      * Convert
      */
     /** Example: number = 123; return = '123'*/
     function numberToString(number: number): string;
+    /** Example: number = 26; return = 11010 */
+    function numberToBinary(number: number): string;
+    /** Example: number = 26; return = 32 */
+    function numberToOct(number: number): string;
+    /** Example: number = 26; return = 1a */
+    function numberToHex(number: number): string;
+    /**
+     * Helper
+     */
+    function converter(number: number, type: string): string;
     /**
      * Number actions
      */
@@ -62,11 +77,8 @@ export declare namespace angularMath {
     function reverseOfNumber(number: number): number;
     /** Example: number = 12345; return = 5 */
     function lengthOfNumber(number: number): number;
-    /**
-     * Example: number = 123; return = false
-     * Example: number = 12321; return = true
-     */
-    function isPalindrome(number: number): boolean;
+    /** Example: number = 3; return = 6; */
+    function factorialOfNumber(number: number): number;
     /** Example: number = 12321; figure = 1; return = 2; */
     function figureOfNumber(number: number, figure: number): number | boolean;
     /**

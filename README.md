@@ -19,6 +19,9 @@ Dependencies:
     * [Math](#math)
 * [Repository](#repository)
 * [License](#license)
+* [Release](#release)
+    * [v1.0.6](#v1.0.6)
+    * [v1.0.5](#v1.0.5)
 
 # Install
 ```bash
@@ -52,10 +55,14 @@ import { angularMath } from 'angular-ts-math';
 * check if the number is integer `angularMath.isInteger(number);`
 * check if the number is even `angularMath.isEven(number);`
 * check if the number is odd `angularMath.isOdd(number);`
+* check if the number is palindrome `angularMath.isPalindrome(number);`
 
 ##### Convert
 
 * convert a number to string `angularMath.numberToString(number);`
+* convert a number to binary `angularMath.numberToBinary(number);`
+* convert a number to octal `angularMath.numberToOct(number);`
+* convert a number to hexadecimal `angularMath.numberToHex(number);`
 
 ##### Number actions
 
@@ -73,8 +80,8 @@ import { angularMath } from 'angular-ts-math';
 * get the nearest back integer number of a number `angularMath.backIntegerOfNumber(number);`
 * get the reverse number of a number `angularMath.reverseOfNumber(number);`
 * get the length of a number `angularMath.lengthOfNumber(number);`
-* check if a number is palindrome `angularMath.isPalindrome(number);`
 * count the number of a specific figure in a number `angularMath.figureOfNumber(number, figure);`
+* get the factorial of an integer number `angularMath.factorialOfNumber(number);`
 
 ##### Operations
 
@@ -100,3 +107,16 @@ import { angularMath } from 'angular-ts-math';
 # License
 
 [MIT](https://github.com/s3c4/angular-ts-math/blob/master/LICENSE) © [Secareanu Andrei](https://github.com/s3c4)
+
+# Release
+
+##### v1.0.6
+
+* add factorial functionality; - [Number actions](#number-actions)
+* convert number from decimal to binary; - [Convert](#convert)
+* convert number from decimal to octal; - [Convert](#convert)
+* convert number from decimal to hexadecimal; - [Convert](#convert)
+
+##### v1.0.5
+
+* first release;

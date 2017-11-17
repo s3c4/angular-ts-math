@@ -1,6 +1,6 @@
 {
   "name": "angular-ts-math",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Angular ts numbers and math!",
   "main": "dist/angular-ts-math.js",
   "types": "dist/angular-ts-math.d.ts",

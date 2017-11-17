@@ -42,11 +42,54 @@ var angularMath;
     function isOdd(number) { return isNumber(number) && number % 2 !== 0; }
     angularMath.isOdd = isOdd;
     /**
+     * Example: number = 123; return = false
+     * Example: number = 12321; return = true
+     */
+    function isPalindrome(number) {
+        if (isNumber(number)) {
+            var reverseNumber = reverseOfNumber(number);
+            return (isNumber(reverseNumber) && number === reverseNumber);
+        }
+        else {
+            return false;
+        }
+    }
+    angularMath.isPalindrome = isPalindrome;
+    /**
      * Convert
      */
     /** Example: number = 123; return = '123'*/
     function numberToString(number) { return number.toString(); }
     angularMath.numberToString = numberToString;
+    /** Example: number = 26; return = 11010 */
+    function numberToBinary(number) { return this.converter(number, 'B'); }
+    angularMath.numberToBinary = numberToBinary;
+    /** Example: number = 26; return = 32 */
+    function numberToOct(number) { return this.converter(number, 'O'); }
+    angularMath.numberToOct = numberToOct;
+    /** Example: number = 26; return = 1a */
+    function numberToHex(number) { return this.converter(number, 'H'); }
+    angularMath.numberToHex = numberToHex;
+    /**
+     * Helper
+     */
+    function converter(number, type) {
+        if (number < 0) {
+            number = 0xFFFFFFFF + number + 1;
+        }
+        number = parseInt(number.toString(), 10);
+        switch (type) {
+            case 'B':
+                return number.toString(2);
+            case 'O':
+                return number.toString(8);
+            case 'H':
+                return number.toString(16);
+            default:
+                return number.toString(10);
+        }
+    }
+    angularMath.converter = converter;
     /**
      * Number actions
      */
@@ -112,20 +155,21 @@ var angularMath;
         }
     }
     angularMath.lengthOfNumber = lengthOfNumber;
-    /**
-     * Example: number = 123; return = false
-     * Example: number = 12321; return = true
-     */
-    function isPalindrome(number) {
-        if (isNumber(number)) {
-            var reverseNumber = reverseOfNumber(number);
-            return (isNumber(reverseNumber) && number === reverseNumber);
+    /** Example: number = 3; return = 6; */
+    function factorialOfNumber(number) {
+        if (isInteger(number)) {
+            var arrayOfNumbers = [];
+            while (number >= 1) {
+                arrayOfNumbers.push(number);
+                number--;
+            }
+            return this.mul(arrayOfNumbers);
         }
         else {
-            return false;
+            return 0;
         }
     }
-    angularMath.isPalindrome = isPalindrome;
+    angularMath.factorialOfNumber = factorialOfNumber;
     /** Example: number = 12321; figure = 1; return = 2; */
     function figureOfNumber(number, figure) {
         if (isNumber(number) && isInteger(number) &&

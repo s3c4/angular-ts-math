@@ -30,12 +30,51 @@ export namespace angularMath {
     export function isEven(number: number): boolean {return isNumber(number) && number % 2 === 0 }
     /** Example: number = 10; return = false */
     export function isOdd(number: number): boolean {return isNumber(number) && number % 2 !== 0 }
+    /**
+     * Example: number = 123; return = false
+     * Example: number = 12321; return = true
+     */
+    export function isPalindrome(number: number): boolean {
+        if(isNumber(number)) {
+            let reverseNumber = reverseOfNumber(number);
+            return (isNumber(reverseNumber) && number === reverseNumber);
+        } else {
+            return false;
+        }
+    }
 
     /**
      * Convert
      */
     /** Example: number = 123; return = '123'*/
     export function numberToString(number: number): string { return number.toString() }
+    /** Example: number = 26; return = 11010 */
+    export function numberToBinary(number: number): string { return this.converter(number, 'B') }
+    /** Example: number = 26; return = 32 */
+    export function numberToOct(number: number): string { return this.converter(number, 'O') }
+    /** Example: number = 26; return = 1a */
+    export function numberToHex(number: number): string { return this.converter(number, 'H') }
+
+    /**
+     * Helper
+     */
+    export function converter(number: number, type: string) {
+        if (number < 0) {
+            number = 0xFFFFFFFF + number + 1;
+        }
+        number = parseInt(number.toString(), 10);
+
+        switch(type) {
+            case 'B':
+                return number.toString(2);
+            case 'O':
+                return number.toString(8);
+            case 'H':
+                return number.toString(16);
+            default:
+                return number.toString(10);
+        }
+    }
 
     /**
      * Number actions
@@ -89,16 +128,18 @@ export namespace angularMath {
         }
     }
 
-    /**
-     * Example: number = 123; return = false
-     * Example: number = 12321; return = true
-     */
-    export function isPalindrome(number: number): boolean {
-        if(isNumber(number)) {
-            let reverseNumber = reverseOfNumber(number);
-            return (isNumber(reverseNumber) && number === reverseNumber);
+    /** Example: number = 3; return = 6; */
+    export function factorialOfNumber(number: number): number {
+
+        if(isInteger(number)) {
+            let arrayOfNumbers = [];
+            while(number >= 1) {
+                arrayOfNumbers.push(number);
+                number--;
+            }
+            return this.mul(arrayOfNumbers);
         } else {
-            return false;
+            return 0;
         }
     }
 
