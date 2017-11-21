@@ -8,6 +8,8 @@ export declare namespace angularMath {
     function getLn10(): number;
     function getLog2E(): number;
     function getLog10E(): number;
+    function getMinSafeInteger(): number;
+    function getMaxSafeInteger(): number;
     /**
      * Get random
      */
@@ -15,6 +17,7 @@ export declare namespace angularMath {
     function getRandom(): number;
     /** Example: min = 1; max = 6; return = 4 */
     function getIntegerRandomRange(min: number, max: number): number;
+    function getNIntegerRandomRange(min: number, max: number, n: number): Array<number>;
     /**
      * Util
      */
@@ -105,4 +108,6 @@ export declare namespace angularMath {
     function asinNumber(number: number): number;
     function acosNumber(number: number): number;
     function atanNumber(number: number): number;
+    function sigma(min: number, max: number): number;
+    function pi(min: number, max: number): number;
 }

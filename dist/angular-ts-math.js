@@ -17,6 +17,10 @@ var angularMath;
     angularMath.getLog2E = getLog2E;
     function getLog10E() { return Math.LOG10E; }
     angularMath.getLog10E = getLog10E;
+    function getMinSafeInteger() { return -9007199254740991; }
+    angularMath.getMinSafeInteger = getMinSafeInteger;
+    function getMaxSafeInteger() { return 9007199254740991; }
+    angularMath.getMaxSafeInteger = getMaxSafeInteger;
     /**
      * Get random
      */
@@ -26,6 +30,19 @@ var angularMath;
     /** Example: min = 1; max = 6; return = 4 */
     function getIntegerRandomRange(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
     angularMath.getIntegerRandomRange = getIntegerRandomRange;
+    function getNIntegerRandomRange(min, max, n) {
+        if (isInteger(min) && isInteger(max) && isInteger(n) && min < max && n > 0) {
+            var arrayOfNumbers = [];
+            for (var i = 0; i < n; i++) {
+                arrayOfNumbers.push(getIntegerRandomRange(min, max));
+            }
+            return arrayOfNumbers;
+        }
+        else {
+            return [];
+        }
+    }
+    angularMath.getNIntegerRandomRange = getNIntegerRandomRange;
     /**
      * Util
      */
@@ -297,4 +314,30 @@ var angularMath;
     angularMath.acosNumber = acosNumber;
     function atanNumber(number) { return Math.atan(number); }
     angularMath.atanNumber = atanNumber;
+    function sigma(min, max) {
+        if (isInteger(min) && isInteger(max) && min < max) {
+            var sum_1 = 0;
+            for (var i = min; i <= max; i++) {
+                sum_1 += i;
+            }
+            return sum_1;
+        }
+        else {
+            return 0;
+        }
+    }
+    angularMath.sigma = sigma;
+    function pi(min, max) {
+        if (isInteger(min) && isInteger(max) && min < max) {
+            var mul_1 = 1;
+            for (var i = min; i <= max; i++) {
+                mul_1 *= i;
+            }
+            return mul_1;
+        }
+        else {
+            return 0;
+        }
+    }
+    angularMath.pi = pi;
 })(angularMath = exports.angularMath || (exports.angularMath = {}));

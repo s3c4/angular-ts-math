@@ -10,6 +10,8 @@ export namespace angularMath {
     export function getLn10(): number { return Math.LN10 }
     export function getLog2E(): number { return Math.LOG2E }
     export function getLog10E(): number { return Math.LOG10E }
+    export function getMinSafeInteger(): number { return -9007199254740991 }
+    export function getMaxSafeInteger(): number { return 9007199254740991 }
 
     /**
      * Get random
@@ -17,7 +19,18 @@ export namespace angularMath {
     /** Example: return = 0.123456789 */
     export function getRandom(): number { return Math.random() }
     /** Example: min = 1; max = 6; return = 4 */
-    export function getIntegerRandomRange(min: number, max: number) { return Math.floor(Math.random() * (max - min + 1) + min) }
+    export function getIntegerRandomRange(min: number, max: number): number { return Math.floor(Math.random() * (max - min + 1) + min) }
+    export function getNIntegerRandomRange(min: number, max: number, n: number): Array<number> {
+        if(isInteger(min) && isInteger(max) && isInteger(n) && min < max && n > 0) {
+            let arrayOfNumbers = [];
+            for (let i = 0; i < n; i++) {
+                arrayOfNumbers.push(getIntegerRandomRange(min, max));
+            }
+            return arrayOfNumbers;
+        } else {
+            return [];
+        }
+    }
 
     /**
      * Util
@@ -234,6 +247,27 @@ export namespace angularMath {
     export function asinNumber(number: number): number { return Math.asin(number) }
     export function acosNumber(number: number): number { return Math.acos(number) }
     export function atanNumber(number: number): number { return Math.atan(number) }
-
+    export function sigma(min: number, max: number): number {
+        if(isInteger(min) && isInteger(max) && min < max) {
+            let sum = 0;
+            for (let i = min; i <= max; i++) {
+                sum += i;
+            }
+            return sum;
+        } else {
+            return 0;
+        }
+    }
+    export function pi(min: number, max: number):number {
+        if(isInteger(min) && isInteger(max) && min < max) {
+            let mul = 1;
+            for (let i = min; i <= max; i++) {
+                mul *= i;
+            }
+            return mul;
+        } else {
+            return 0;
+        }
+    }
 
 }

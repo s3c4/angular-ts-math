@@ -19,7 +19,8 @@ Dependencies:
     * [Math](#math)
 * [Repository](#repository)
 * [License](#license)
-* [Release](#release)
+* [Changelog](#changelog)
+    * [v1.0.7](#v107)
     * [v1.0.6](#v106)
     * [v1.0.5](#v105)
 
@@ -43,11 +44,14 @@ import { angularMath } from 'angular-ts-math';
 * get the ln10 value `angularMath.getLn10();`
 * get the log2 of e value `angularMath.getLog2E();`
 * get the log10 of e value `angularMath.getLog10E();`
+* get the min safe `angularMath.getMinSafeInteger();`
+* get the max sage `angularMath.getMaxSafeInteger();`
 
 ##### Random
 
 * get random values between [0,1) `angularMath.getRandom();`
 * get random integer values between the min and max `angularMath.getIntegerRandomRange(min, max);`
+* get random n integers numbers between min and max  `angularMath.getNIntegerRandomRange(min, max, n);`
 
 ##### Utils
 
@@ -91,6 +95,8 @@ import { angularMath } from 'angular-ts-math';
 * get the div of n numbers, starting with the first `angularMath.div(n1, n2, n3, ...);`
 * get the min value of n numbers `angularMath.getMinimum(n1, n2, n3, ...);`
 * get the max value of n numbers `angularMath.getMaximum(n1, n2, n3, ...);`
+* get the sum between integers min and max (sigma function) `angularMath.sigma(min, max);`
+* get the mul between integers min and max (pi function) `angularMath.pi(min, max);`
 
 ##### Math
 
@@ -108,7 +114,15 @@ import { angularMath } from 'angular-ts-math';
 
 [MIT](https://github.com/s3c4/angular-ts-math/blob/master/LICENSE) © [Secareanu Andrei](https://github.com/s3c4)
 
-# Release
+# Changelog
+
+##### v1.0.7
+
+* add the min integer safe; - [Constants](#constants)
+* add the max integer safe; - [Constants](#constants)
+* add the random n numbers beteen 2 integers min and max; - [Random](#random)
+* add the sigma math operation; - [Operations](#operations)
+* add the pi operation; - [Operations](#operations) 
 
 ##### v1.0.6
 
