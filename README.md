@@ -112,7 +112,7 @@ import { angularMath } from 'angular-ts-math';
 
 # License
 
-[MIT](https://github.com/s3c4/angular-ts-math/blob/master/LICENSE) © [Secareanu Andrei](https://github.com/s3c4)
+[MIT](https://github.com/s3c4/angular-ts-math/blob/master/LICENSE) © [Andrei Secareanu](https://github.com/s3c4)
 
 # Changelog
 
