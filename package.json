@@ -1,12 +1,15 @@
 {
   "name": "angular-ts-math",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "Angular ts numbers and math!",
   "main": "dist/angular-ts-math.js",
   "types": "dist/angular-ts-math.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.1"
+    "tslint": "^6.1.3",
+    "typescript": "^4.7.4"
   },
   "license": "MIT",
   "repository": {
@@ -15,7 +18,7 @@
   },
   "keywords": ["angular", "math", "ts", "angular-ts", "angular-ts-math", "angular-math", "typescript", "angular2" ],
   "author": {
-    "name": "Secareanu Andrei",
+    "name": "Andrei Secareanu",
     "url": "https://github.com/s3c4",
     "email": "seca.andrei@gmail.com"
   }

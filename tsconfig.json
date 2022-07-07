@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2022",
     "declaration": true,
-    "outDir": "./dist",
-    "moduleResolution": "node"
+    "outDir": "./dist/angular-ts-math",
+    "moduleResolution": "node",
+    "removeComments": true,
   },
   "include": [
     "src/**/*"
+  ],
+  "exclude": [
+      "node_modules",
+      "**/*.spec.ts"
   ]
 }

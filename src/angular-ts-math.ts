@@ -189,7 +189,7 @@ export namespace angularMath {
                 }
             });
         }
-        return sum;
+        return sum.toFixed(2);
     }
 
     /** Example: numbers = 10, 1, 2, 3; return = 4 */
@@ -202,7 +202,7 @@ export namespace angularMath {
                 }
             });
         }
-        return dif;
+        return dif.toFixed(2);
     }
 
     /** Example: numbers = 1, 2, 3; return = 6 */
@@ -217,7 +217,7 @@ export namespace angularMath {
         } else {
             return 0;
         }
-        return mul;
+        return mul.toFixed(2);
     }
 
     /** Example: numbers = 100, 2, 5; return = 10 */
@@ -230,7 +230,7 @@ export namespace angularMath {
                 }
             });
         }
-        return div;
+        return div.toFixed(2);
     }
 
     /** Example: numbers = 10, 20, 30, 40; return 10 */

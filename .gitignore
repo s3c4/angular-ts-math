@@ -2,3 +2,5 @@
 /node_modules/
 .npmignore
 tslint.json
+dist/
+package-lock.json
