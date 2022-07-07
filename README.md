@@ -116,6 +116,11 @@ import { angularMath } from 'angular-ts-math';
 
 # Changelog
 
+##### v2.0.0
+* fixed the issue;
+* the sum, dif, mul and div will return the correct value, rounded to 2 decimals;
+* typescript updated to the latest version;
+
 ##### v1.0.7
 
 * add the min integer safe; - [Constants](#constants)
