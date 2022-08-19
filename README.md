@@ -31,7 +31,7 @@ npm install angular-ts-math
 
 # Import
 ```typescript
-import { angularMath } from 'angular-ts-math';
+import { angularMath } from 'angular-ts-math/dist/angular-ts-math/angular-ts-math';
 ```
 
 # Use
