@@ -114,6 +114,7 @@ import { angularMath } from 'angular-ts-math/dist/angular-ts-math/angular-ts-mat
 
 [MIT](https://github.com/s3c4/angular-ts-math/blob/master/LICENSE) © [Andrei Secareanu](https://github.com/s3c4)
 
+Made with :blue_heart: from London
 # Changelog
 
 ##### v2.0.0
